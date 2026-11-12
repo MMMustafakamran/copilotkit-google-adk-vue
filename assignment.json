@@ -128,6 +128,7 @@
    ]
   }
  ],
+ "quickstartBlocked": "the Vue quickstart is the Google ADK landing page; there are no Vue steps, no runtime and no ADK agent wiring, so a reader has no working Vue app to build on",
  "pages": [
   {
    "id": "quickstart",
@@ -149,7 +150,7 @@
     {
      "text": null,
      "clip": "ADK-vue-01-Quickstart",
-     "loom": null
+     "loom": "https://www.loom.com/share/22b8d548c035452aa75ca5fbda3f2b12"
     }
    ],
    "added": "2026-11-12"
@@ -257,11 +258,13 @@
    "child": true,
    "docPath": "prebuilt-components/copilot-threads-drawer",
    "reachable": "sidebar",
-   "status": "pending",
+   "status": "✅",
    "findings": [
     11
    ],
-   "notes": [],
+   "notes": [
+    "Note: uses agent-id support, which nothing registers."
+   ],
    "block": null,
    "links": [
     {
