@@ -51,6 +51,7 @@ Install fresh (`npm install` / `uv sync` within the ranges in `package.json` / `
 | New page in the sidebar or newly linked ("New pages to decide") | Not recorded yet | Same as above. If the owner decides to skip it, `--sync-nav` so it stops showing. |
 | Sidebar page renamed or moved to another group | No | Update the report's grouping rows / page label. |
 | Dead link (in-section link → 404) | No | Minor note in FINDINGS.md (level 3/4); not a blocker unless the reader needs that page to finish the steps. |
+| Quickstart changed in a repo with `quickstartBlocked` (QA-RULES 8b) | Yes (it's the only page CI records and drift-checks there) | Probe the new quickstart. Still no usable setup → keep the flag, update its clip. Usable now → remove `quickstartBlocked`, then run the whole framework again: `drift.mjs --out=drift` on every page (snapshots may be stale), update the harness for each drifted page, probe, record `scope=all`, upload, rebuild the report. |
 | Docs site unreachable / page fetch error | No | Record on the old snapshot; note "drift unknown". Check it by hand next day if it repeats. |
 | Sidebar baseline missing | No | Run `drift.mjs --sync-nav` locally and commit. |
 
